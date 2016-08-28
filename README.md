@@ -1,16 +1,16 @@
-# Architectural Pattern DBAV
+# DBAV Architecture Pattern
 
 ![logo](https://cloud.githubusercontent.com/assets/2594928/17424851/689c0efe-5a8d-11e6-9a1c-aaccd3986727.png)
 
 ### Main Goal
-Explore, investigate, design, test and develop an experimental Software Architectural Pattern that I named **DBAV**, and make it suitable for any mobile development.
+Explore, investigate, design, test and develop an experimental Software Architecture Pattern that I named **DBAV**, and make it suitable for any mobile development.
 
 ### Motivation
 This project was created to serve as a Template Project for my future mobile projects and as Laboratory Test for proposals about new software engineering techniques and use of best programming practices, in order to improve my programming skills and become a Mobile Architect some day...
 
 ### Objetives
 * Create an iOS project as a Proof-Of-Concept
-* Design and implement a the DBAV architectural pattern
+* Design and implement a the DBAV Architecture Pattern
 * Create a consistent folder structure
 * List all controllers that a mobile app could have
 * Design a template for a Business Rules
