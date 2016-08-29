@@ -21,6 +21,18 @@ This project was created to serve as a Template Project for my future mobile pro
 ### What is DBAV?
 Is a pattern optimized for mobile projects, which specifies how to organize a project at diferent stages, making projects more flexible, organized, extendable and testeable. I came with this pattern after using several others, extracting the best of them, dropping things that are not so adecuate for mobile projects and introducing some fresh ideas...
 
+There is a really interesting reading about most known patterns for iOS showing its advantages and drawbacks here:
+[iOS Architecture Patterns - Demystifying MVC, MVP, MVVM and VIPER by Bohdan Orlov](https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52)
+
+### Let´s start
+Any mobile app has nowadays a lot of capabilities provided by the host OS, ranging from accessing to user information to getting data from all device sensors
+
+![OS Environment](https://cloud.githubusercontent.com/assets/2594928/18035564/ca9287a8-6d1d-11e6-89c8-15d3d67c504e.png)
+
+A mobile app gets data, most of the time associated to a user, does some processing and sends back the results, continuously, using one or many SO capabilities in a specific logical flow: Showing the results of a search, saving data captured by a form, applying a filter to an image, validating the content entered in a textbox, storing data persistently, playing a song, recording video, all of these are good examples.
+
+So, it is natural that an app have a way of control the access to those capabilities
+
 ### Components
 DBAV specifies 4 main mandatory components. For better undestanding, let's suppose that a mobile project is like making a dinner...
 * **Data Models:** They are all Ingredients we are going to cook. Represents the data to process.
