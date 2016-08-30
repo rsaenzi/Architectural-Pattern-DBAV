@@ -34,7 +34,7 @@ DBAV specifies 4 main mandatory components. For better undestanding, let's suppo
 ### Why this components exists?
 Any mobile app has nowadays a lot of capabilities provided by the OS host, ranging from accessing to user information to getting data from all device sensors.
 
-![OS Environment](https://cloud.githubusercontent.com/assets/2594928/18035564/ca9287a8-6d1d-11e6-89c8-15d3d67c504e.png)
+![Access Controllers](https://cloud.githubusercontent.com/assets/2594928/18102670/fcb859aa-6eb8-11e6-9978-545818412cc2.png)
 
 So, it is natural that an app have a way of control the access to those capabilities, a wrapper for each one, that provides a consistent and unified way to use them. In DBAV each wrapper is called an **Access Controller**.
 
@@ -47,7 +47,7 @@ A mobile app gets data, most of the time associated to a user, does some process
 * Playing a song
 * Recording video
 
-These task always have a static logical graph flow that specifies what happens if the task is performed with or without error, for instance, imagine an app that must download and show an image whose URL must be taken from a webservice. A simple logical graph is described below:
+These higher-level algorithms are essentially a static logical graph flow that specifies what happens if a particular task is performed with or without errors and how to handle them, for instance, imagine an app that must download and show an image whose URL must be taken from a webservice. A simple logical graph is described below:
 * Ask the webservice for the image URL, then download asynchronously the image and load it in the image container.
 * If the device is not connected to Internet, shows a message dialog that states: "Please check your Internet connection..."
 * If the connection to the webservice is not possible, shows a message dialog that states: "Please try again later..."
@@ -55,7 +55,9 @@ These task always have a static logical graph flow that specifies what happens i
 * If the URL is not valid, shows a message dialog that states: "The image does not exist"
 * If the image is larger than 256x256px, scale it to that size
 
-These logical flows must be declared in code clearly, and not distributed among a lot of components/classes/views. In DBAV each graph is called a **Business Rule**.
+![Business Rules](https://cloud.githubusercontent.com/assets/2594928/18102677/026999c2-6eb9-11e6-96c7-61ce914e4384.png)
+
+So, it is natural that an app have these graph flows expressed clearly and not distributed among lots of components/controllers/classes/views. In DBAV each graph is called a **Business Rule**.
 
 
 ### Hierarchical Navigation
