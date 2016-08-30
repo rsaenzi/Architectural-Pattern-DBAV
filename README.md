@@ -25,7 +25,7 @@ There is a really interesting reading about most known patterns for iOS showing 
 [iOS Architecture Patterns - Demystifying MVC, MVP, MVVM and VIPER by Bohdan Orlov](https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52)
 
 ### Components
-DBAV specifies 4 main mandatory components. For better undestanding, let's suppose that a mobile project is like making a dinner...
+DBAV specifies 4 main mandatory components. For better undestanding, let's suppose that creating a mobile app is like making a dinner...
 * **Data Models:** They are all Ingredients we are going to cook. Represents the data to process.
 * **Access Controllers:** They are the Cookware needed to process our ingredients. Represents the device capabilities and sensors.
 * **Business Rules:** They are the Recipes, specifies how to use the cookware to process the ingredients. Represents the user stories and bussiness logic.
