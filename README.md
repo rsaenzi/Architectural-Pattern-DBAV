@@ -24,21 +24,39 @@ Is a pattern optimized for mobile projects, which specifies how to organize a pr
 There is a really interesting reading about most known patterns for iOS showing its advantages and drawbacks here:
 [iOS Architecture Patterns - Demystifying MVC, MVP, MVVM and VIPER by Bohdan Orlov](https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52)
 
-### Let´s start
-Any mobile app has nowadays a lot of capabilities provided by the host OS, ranging from accessing to user information to getting data from all device sensors
-
-![OS Environment](https://cloud.githubusercontent.com/assets/2594928/18035564/ca9287a8-6d1d-11e6-89c8-15d3d67c504e.png)
-
-A mobile app gets data, most of the time associated to a user, does some processing and sends back the results, continuously, using one or many SO capabilities in a specific logical flow: Showing the results of a search, saving data captured by a form, applying a filter to an image, validating the content entered in a textbox, storing data persistently, playing a song, recording video, all of these are good examples.
-
-So, it is natural that an app have a way of control the access to those capabilities
-
 ### Components
 DBAV specifies 4 main mandatory components. For better undestanding, let's suppose that a mobile project is like making a dinner...
 * **Data Models:** They are all Ingredients we are going to cook. Represents the data to process.
 * **Access Controllers:** They are the Cookware needed to process our ingredients. Represents the device capabilities and sensors.
 * **Business Rules:** They are the Recipes, specifies how to use the cookware to process the ingredients. Represents the user stories and bussiness logic.
 * **View Managers:** They are the Dishes used to show our dinner. Represents the user interface.
+
+### Why this components exists?
+Any mobile app has nowadays a lot of capabilities provided by the OS host, ranging from accessing to user information to getting data from all device sensors.
+
+![OS Environment](https://cloud.githubusercontent.com/assets/2594928/18035564/ca9287a8-6d1d-11e6-89c8-15d3d67c504e.png)
+
+So, it is natural that an app have a way of control the access to those capabilities, a wrapper for each one, that provides a consistent and unified way to use them. In DBAV each wrapper is called an **Access Controller**.
+
+A mobile app gets data, most of the time associated to a user, does some processing and sends back the results, most of the time to the screen, using one or many OS capabilities in a specific logical flow:
+* Showing the results of a search
+* Saving data captured by a form
+* Applying a filter to an image
+* Validating the content entered in a textbox
+* Storing data persistently
+* Playing a song
+* Recording video
+
+These task always have a static logical graph flow that specifies what happens if the task is performed with or without error, for instance, imagine an app that must download and show an image whose URL must be taken from a webservice. A simple logical graph is described below:
+* Ask the webservice for the image URL, then download asynchronously the image and load it in the image container.
+* If the device is not connected to Internet, shows a message dialog that states: "Please check your Internet connection..."
+* If the connection to the webservice is not possible, shows a message dialog that states: "Please try again later..."
+* If the webservice returns a HTTP 404 error code, redirect the user to the login screen
+* If the URL is not valid, shows a message dialog that states: "The image does not exist"
+* If the image is larger than 256x256px, scale it to that size
+
+These logical flows must be declared in code clearly, and not distributed among a lot of components/classes/views. In DBAV each graph is called a **Business Rule**.
+
 
 ### Hierarchical Navigation
 (Under construction...)
