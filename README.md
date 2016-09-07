@@ -23,7 +23,7 @@ There is a really interesting reading about most known patterns for iOS showing 
 [iOS Architecture Patterns - Demystifying MVC, MVP, MVVM and VIPER by Bohdan Orlov](https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52)
 
 ### Components
-DBAV specifies 4 main mandatory components. For better undestanding, let's suppose that creating a mobile app is like making a dinner...
+MultiGraph specifies 4 main mandatory components. For better undestanding, let's suppose that creating a mobile app is like making a dinner...
 * **Data Models:** They are all Ingredients we are going to cook. Represents the data to process.
 * **Access Controllers:** They are the Cookware needed to process our ingredients. Represents the device capabilities and sensors.
 * **Business Rules:** They are the Recipes, specifies how to use the cookware to process the ingredients. Represents the user stories and bussiness logic.
@@ -34,7 +34,7 @@ Any mobile app has nowadays a lot of capabilities provided by the OS host, rangi
 
 ![Access Controllers](https://cloud.githubusercontent.com/assets/2594928/18102670/fcb859aa-6eb8-11e6-9978-545818412cc2.png)
 
-So, it is natural that an app have a way of control the access to those capabilities, a wrapper for each one, that provides a consistent and unified way to use them. In DBAV each wrapper is called an **Access Controller**.
+So, it is natural that an app have a way of control the access to those capabilities, a wrapper for each one, that provides a consistent and unified way to use them. In MultiGraph each wrapper is called an **Access Controller**.
 
 
 A mobile app gets data, most of the time associated to a user, does some processing and sends back the results, most of the time to the screen, using one or many OS capabilities in a specific logical flow:
@@ -56,7 +56,7 @@ These higher-level algorithms or workflows essentially specifies what happens if
 
 ![Business Rules](https://cloud.githubusercontent.com/assets/2594928/18102677/026999c2-6eb9-11e6-96c7-61ce914e4384.png)
 
-So, it is natural that an app have these workflows expressed clearly and not distributed among lots of components/controllers/classes/views. In DBAV each graph is called a **Business Rule**.
+So, it is natural that an app have these workflows expressed clearly and not distributed among lots of components/controllers/classes/views. In MultiGraph each graph is called a **Business Rule**.
 
 
 ### Hierarchical Navigation
