@@ -8,10 +8,10 @@ This project was created to serve as a Template Project for my future mobile pro
 
 ### Objetives
 * Create an iOS project as a Proof-Of-Concept
-* Design and implement a the MultiGraph Architecture Pattern
+* Design and implement the MultiGraph Architecture Pattern
 * Create a consistent folder structure
 * List all controllers that a mobile app could have
-* Design a template for a Business Rules
+* Design a template for Business Rules
 * Design an data flow that connects all components
 * Generate a Data Model to test the MultiGraph pattern
 * Define how to test properly the MultiGraph components
@@ -21,6 +21,9 @@ Is a pattern optimized for mobile projects, which specifies how to organize a pr
 
 There is a really interesting reading about most known patterns for iOS showing its advantages and drawbacks here:
 [iOS Architecture Patterns - Demystifying MVC, MVP, MVVM and VIPER by Bohdan Orlov](https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52)
+
+### Why I put that name to this pattern?
+Because after analyze how its components can be connected, it looks like a graph, so all its nomenclature are related to Graph Theory
 
 ### Components
 MultiGraph specifies 4 main mandatory components. For better undestanding, let's suppose that creating a mobile app is like making a dinner...
