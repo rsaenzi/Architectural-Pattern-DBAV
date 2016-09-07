@@ -1,7 +1,5 @@
 # MultiGraph Architecture Pattern
 
-![logo](https://cloud.githubusercontent.com/assets/2594928/17424851/689c0efe-5a8d-11e6-9a1c-aaccd3986727.png)
-
 ### Main Goal
 Explore, investigate, design, test and develop an experimental Software Architecture Pattern that I named **MultiGraph**, and make it suitable for any mobile development.
 
