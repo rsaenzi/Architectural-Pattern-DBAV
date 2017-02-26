@@ -1,6 +1,0 @@
-framework module Pods_DBAV_Example {
-  umbrella header "Pods-DBAV_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}

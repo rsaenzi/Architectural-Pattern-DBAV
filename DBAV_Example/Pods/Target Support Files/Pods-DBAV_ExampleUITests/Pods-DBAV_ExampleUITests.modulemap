@@ -1,6 +1,0 @@
-framework module Pods_DBAV_ExampleUITests {
-  umbrella header "Pods-DBAV_ExampleUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
