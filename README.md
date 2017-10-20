@@ -1,5 +1,8 @@
 # MultiGraph Architecture Pattern
 
+### Note:
+This proposal is under development, I will inform when is ready for use by third-party devs...
+
 ### Main Goal
 Explore, investigate, design, test and develop an experimental Software Architecture Pattern that I named **MultiGraph**, and make it suitable for any mobile development.
 
